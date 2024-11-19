@@ -91,7 +91,6 @@ def mc_control (env,n_bins=g_bins, gamma = 1.0,
         pi_track.append(np.argmax(Q, axis=env.observation_space.shape[0]))
         if e != 0:
             mean_steps_balanced = steps_balanced_total/e
-        #progress_bar.set_postfix(episode=e, Epsilon=epsilons[e], Steps=f"{len(trajectory)}" ,MeanStepsBalanced=f"{mean_steps_balanced:.2f}", NonZeroValues="{0}/{1}".format(n_nonzero_elements,n_elements))
         progress_bar.set_postfix(episode=e, Epsilon=epsilons[e], StepsBalanced=f"{len(trajectory)}" ,MeanStepsBalanced=f"{mean_steps_balanced:.2f}")
 
     print("mean_steps_balanced={0},steps_balanced_total={1}".format(mean_steps_balanced,steps_balanced_total))
@@ -111,7 +110,7 @@ def mc_control (env,n_bins=g_bins, gamma = 1.0,
    
 ![image](https://github.com/user-attachments/assets/095b391c-5808-44e0-977d-e14de426e62c)
 
-4. Mention the average number of steps maintained over a four-minute period when the Monte Carlo (MC) control algorithm is executed with pretrained Q-values with modified parameters
+3. Mention the average number of steps maintained over a four-minute period when the Monte Carlo (MC) control algorithm is executed with pretrained Q-values with modified parameters
 
 ![image](https://github.com/user-attachments/assets/043a4cd8-4928-4f3f-97e7-e53f1b465389)
 
